@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva - Spa Jazmín</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Carga dinámica del header -->
+    <div id="header"></div>
+
+    <section class="reserva-titulo">
+        <h1>RESERVA</h1>
+    </section>
+
+    <section class="contact-form">
+
+        <form id="reserva-form">
+            <!-- Tu formulario actual sigue igual -->
+            <label for="name">Nombre y Apellido:</label>
+            <input type="text" id="name" name="name" placeholder="Escribe tu nombre completo" required>
+        
+            <label for="contact">Número de Contacto:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Ejemplo: 3001234567" pattern="[0-9]{10}" required>
+        
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ejemplo: correo@dominio.com" required>
+        
+            <label for="service">Servicio:</label>
+            <select id="service" name="service" required>
+                <option value="">Selecciona un servicio</option>
+                <option value="circuito_spa">Circuito Spa</option>
+                <option value="masajes">Masajes</option>
+                <option value="rituales">Rituales</option>
+                <option value="spa_comida">Spa y comida</option>
+            </select>
+        
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" name="date" min="2024-01-01" required>
+        
+            <label for="time">Horario:</label>
+            <input type="time" id="time" name="time" min="08:00" max="20:00" required>
+        
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Escribe aquí tu mensaje" required></textarea>
+        
+            <button type="submit">Enviar</button>
+        </form>
+        
+    </section>
+
+    <!-- Carga dinámica del footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="load-header-footer.js"></script>
+    <script src="validar-formulario.js"></script>
+</body>
+</html>
